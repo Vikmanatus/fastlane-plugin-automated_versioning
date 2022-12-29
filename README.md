@@ -14,6 +14,8 @@ fastlane add_plugin automated_versioning
 
 A simple fastlane plugin to help automate versioning of mobile applications
 
+A complete example of integration is available on this [link](https://github.com/Vikmanatus/fastlane-versioning-example)
+
 **Note to author:** Add a more detailed description about this plugin here. If your plugin contains multiple actions, make sure to mention them here.
 
 ## Example
