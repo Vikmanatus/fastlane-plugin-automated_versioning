@@ -1,14 +1,14 @@
-require 'fastlane/action'
-require_relative '../helper/automated_versioning_helper'
-require_relative "../helper/global/versioning_helper.rb"
+require "fastlane/action"
+require_relative "../helper/automated_versioning_helper"
+require_relative "../helper/global/versioning_helper"
+
 module Fastlane
   module Actions
     class AutomatedVersioningAction < Action
       def self.run(params)
         UI.message("The automated_versioning plugin is working!")
-        versioning_helper = Helper::VersioningHelper
-        versioning_helper.check_versioning_config_file()
-
+        # versioning_helper = Helper::VersioningHelper
+        # versioning_helper.check_versioning_config_file()
       end
 
       def self.description
