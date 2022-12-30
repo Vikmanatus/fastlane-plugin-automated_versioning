@@ -14,15 +14,28 @@ fastlane add_plugin automated_versioning
 
 A simple fastlane plugin to help automate versioning of mobile applications
 
-A complete example of integration is available on this [link](https://github.com/Vikmanatus/fastlane-versioning-example)
+Maintaining the versioning of your mobile application is a key
 
-**Note to author:** Add a more detailed description about this plugin here. If your plugin contains multiple actions, make sure to mention them here.
+Maintaining the versioning of your mobile application is an important key indicator showing the chronological evolution of your project, however sometimes it can happen that before a release the `build_number` or `code_version` has been incorrectly entered...
+
+The goal of this plugin is to help you automate the process of versioning so you don't have to worry about it and you can focus on your project.
+
+### Versioning schemes supported
+
+- Sementic versioning
+
+  - `build_number` and `code_version` generated according to the `version` number
+  - `auto_increment`: the `build_number` and `code_version` will start from 0 and will be auto incremented
+
+- Date of Release
+
+Feel free to send me a message if you find other versioning schemes that we could support in this plugin 😃
 
 ## Example
 
 Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
 
-**Note to author:** Please set up a sample project to make it easy for users to explore what your plugin does. Provide everything that is necessary to try out the plugin in this project (including a sample Xcode/Android project if necessary)
+A complete example of integration is available on this [link](https://github.com/Vikmanatus/fastlane-versioning-example)
 
 ## Run tests for this plugin
 
@@ -33,6 +46,7 @@ rake
 ```
 
 To automatically fix many of the styling issues, use
+
 ```
 rubocop -a
 ```
