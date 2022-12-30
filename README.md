@@ -14,7 +14,6 @@ fastlane add_plugin automated_versioning
 
 A simple fastlane plugin to help automate versioning of mobile applications
 
-Maintaining the versioning of your mobile application is a key
 
 Maintaining the versioning of your mobile application is an important key indicator showing the chronological evolution of your project, however sometimes it can happen that before a release the `build_number` or `code_version` has been incorrectly entered...
 
