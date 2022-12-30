@@ -9,9 +9,9 @@ module Fastlane
         relative_file_path = File.join(File.expand_path(file_path))
         is_file_created = File.file?(relative_file_path)
         if is_file_created
-          return true
+          return TRUE
         else
-          return false
+          return FALSE
         end
       end
     end
