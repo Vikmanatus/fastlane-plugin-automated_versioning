@@ -1,5 +1,5 @@
 require "fastlane/action"
-require_relative "../helper/files/files_helper.rb"
+require_relative "../helper/config/configuration_helper.rb"
 module Fastlane
   module Actions
     class CreateVersioningConfigAction < Action
@@ -7,7 +7,6 @@ module Fastlane
         UI.message("This action will create the config file for verisoning!")
         configuration_helper = Helper::ConfigurationHelper
         configuration_helper.check_versioning_config_file()
-        # versioning_helper.check_versioning_config_file()
       end
 
       def self.description
