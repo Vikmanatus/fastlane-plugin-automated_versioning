@@ -5,7 +5,7 @@ module Fastlane
   UI = FastlaneCore::UI unless Fastlane.const_defined?(:UI)
 
   module Helper
-    class VersioningHelper
+    class ConfigurationHelper
       def self.check_versioning_config_file
         UI.message("Going to check if versioning file exists")
         files_helper = Helper::FilesHelper
