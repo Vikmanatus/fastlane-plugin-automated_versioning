@@ -23,7 +23,7 @@ The goal of this plugin is to help you automate the process of versioning so you
 
 - Sementic versioning
 
-  - `build_number` and `code_version` generated according to the `version` number
+  - `generated_build_number`: `build_number` and `code_version` are generated according to the `version` number
   - `auto_increment`: the `build_number` and `code_version` will start from 0 and will be auto incremented
 
 - Date of Release
