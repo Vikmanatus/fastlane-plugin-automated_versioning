@@ -1,13 +1,11 @@
 require "fastlane/action"
 require_relative "../helper/config/configuration_helper.rb"
+
 module Fastlane
   module Actions
-    class CreateVersioningConfigAction < Action
+    class VersionApplicationAction < Action
       def self.run(params)
-        UI.message("This action will create the config file for verisoning!")
-        configuration_helper = Helper::ConfigurationHelper
-        configuration_helper.check_versioning_config_file()
-        configuration_helper.create_version_file()
+        UI.message("This action will handle the versioning element asked by the user according to his preferences")
       end
 
       def self.description
@@ -29,12 +27,12 @@ module Fastlane
 
       def self.available_options
         [
- # FastlaneCore::ConfigItem.new(key: :your_option,
-                   #                         env_name: "AUTOMATED_VERSIONING_YOUR_OPTION",
-                   #                      description: "A description of your option",
-                   #                         optional: false,
-                   #                             type: String)
-          ]
+          FastlaneCore::ConfigItem.new(key: :element_required,
+                                       env_name: "AUTOMATED_VERSIONING_YOUR_OPTION",
+                                       description: "A description of your option",
+                                       optional: false,
+                                       type: String),
+        ]
       end
 
       def self.is_supported?(platform)

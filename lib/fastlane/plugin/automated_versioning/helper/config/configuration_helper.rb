@@ -1,12 +1,22 @@
 require "json"
 require "fastlane_core/ui/ui"
 require_relative "../files/files_helper"
+require "fastlane_core"
 
 module Fastlane
   UI = FastlaneCore::UI unless Fastlane.const_defined?(:UI)
 
   module Helper
     class ConfigurationHelper
+      def self.create_version_file
+        files_helper = Helper::FilesHelper
+        is_file_created = files_helper.check_file_existence(file_path: "./version.json")
+        if is_file_created
+          UI.message("File version.json exist")
+        else
+          UI.message("File version.json does not exist")
+        end
+      end
       def self.select_versioning_config
         UI.message("Let's go to create your file !")
         UI.message("\n")
